@@ -1,4 +1,4 @@
-trie
+Trie
 ====
 
-Go trie implementation
+Go Trie data structure implementation.
