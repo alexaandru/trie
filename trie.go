@@ -1,8 +1,8 @@
-package utils
+package trie
 
 import (
     "fmt"
-    u "github.com/alexaandru/utils"
+    "github.com/alexaandru/utils"
     "strings"
 )
 
@@ -31,7 +31,7 @@ func TrieNew(labels ...string) (t *Trie) {
 // LoadTrieFromFile loads a trie definition from file.
 func LoadTrieFromFile(fname string, opts ...bool) (t *Trie, pattern string) {
     t = TrieNew()
-    firstStringAsPattern, lines := false, strings.Split(u.LoadFile(fname), "\n")
+    firstStringAsPattern, lines := false, strings.Split(utils.LoadFile(fname), "\n")
     if len(opts) > 0 {
         firstStringAsPattern = opts[0]
     }
